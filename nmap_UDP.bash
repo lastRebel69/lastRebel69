@@ -23,7 +23,7 @@ fi
 echo "Nmap scan running against $add. Check logs..." #prints target address
 if [[ -f "log" ]];	#checks whether to append log file or create one
 then
-	echo nmap $add -sS -sV -oN $dir/$add.nmap --append-output
+	echo nmap $add -sU -oN $dir/$add.nmap --append-output
 else
-	echo nmap $add -sS -sV -oN $dir/$add.nmap #runs nmap sneaky/light using target address
+	echo nmap $add -sU -oN $dir/$add.nmap #runs nmap basic UDP using target address
 fi
